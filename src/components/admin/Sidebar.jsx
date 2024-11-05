@@ -50,7 +50,35 @@ export default function sidebar() {
             <div className="sb-nav-link-icon">
               <i className="fas fa-archive"></i>
             </div>
-            Data Aset 
+            Data Aset
+          </Link>
+
+          <Link
+            className={
+              activeRoute[2] === "asets-expired"
+                ? "nav-link active-sidebar"
+                : "nav-link"
+            }
+            to="/admin/asets-expired"
+          >
+            <div className="sb-nav-link-icon">
+              <i className="fas fa-archive"></i>
+            </div>
+            Aset Habis Masa Manfaat
+          </Link>
+
+          <Link
+            className={
+              activeRoute[2] === "lokasi-asets"
+                ? "nav-link active-sidebar"
+                : "nav-link"
+            }
+            to="/admin/lokasi-asets"
+          >
+            <div className="sb-nav-link-icon">
+              <i className="fas fa-marker"></i>
+            </div>
+            Lokasi / Ruangan Aset
           </Link>
 
           <Link
@@ -64,10 +92,10 @@ export default function sidebar() {
             <div className="sb-nav-link-icon">
               <i className="fas fa-tasks"></i>
             </div>
-            Inspeksi Aset 
+            Inspeksi Aset
           </Link>
 
-          
+
 
 
           {(hasAnyPermission(["categories.index"]) ||
@@ -87,7 +115,7 @@ export default function sidebar() {
                           ? " active-sidebar"
                           : activeRoute[2] === "lokasi-asets"
                             ? " active-sidebar"
-                                : "")
+                            : "")
                   }
                   href="#"
                   data-bs-toggle="collapse"
@@ -118,11 +146,9 @@ export default function sidebar() {
                   ? " show"
                   : activeRoute[2] === "status-asets"
                     ? " show"
-                    : activeRoute[2] === "lokasi-asets"
+                    : activeRoute[2] === "masa-asets"
                       ? " show"
-                      : activeRoute[2] === "masa-asets"
-                      ? " show"
-                          : "")
+                      : "")
             }
             id="collapseLayouts"
             aria-labelledby="headingOne"
@@ -169,18 +195,7 @@ export default function sidebar() {
                 </Link>
               )}
 
-              {hasAnyPermission(["asets.index"]) && (
-                <Link
-                  className={
-                    activeRoute[2] === "lokasi-asets"
-                      ? "nav-link active-sidebar"
-                      : "nav-link"
-                  }
-                  to="/admin/lokasi-asets"
-                >
-                  Lokasi / Ruangan Aset
-                </Link>
-              )}
+              
               {hasAnyPermission(["asets.index"]) && (
                 <Link
                   className={
@@ -194,7 +209,7 @@ export default function sidebar() {
                 </Link>
               )}
 
-            
+
             </nav>
           </div>
 

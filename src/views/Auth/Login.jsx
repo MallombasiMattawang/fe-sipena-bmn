@@ -98,6 +98,8 @@ export default function Login() {
                 >
                   LOGIN
                 </button>
+                <hr />
+                <a href="/privacy">Kebijakan Privasi</a>
               </form>
             </div>
           </div>
