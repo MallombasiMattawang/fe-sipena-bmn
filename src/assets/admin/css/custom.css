@@ -1,0 +1,147 @@
+body {
+  font-family: 'Quicksand', sans-serif !important;
+  background-color: #333333 !important; /* Warna latar belakang tema gelap */
+  color: #ffffff; /* Warna teks pada tema gelap */
+}
+
+.border-top-success {
+  border-top: 5px solid #188a55 !important;
+}
+
+.border-top-yellow {
+  border-top: 5px solid #ffce08 !important;
+}
+
+.btn-primary {
+  background-color: #188a55 !important;
+  border-color: #188a55 !important;
+}
+
+.btn-primary:hover {
+  background-color: #188a55 !important;
+  border-color: #188a55 !important;
+}
+
+.bg-dark {
+  background-color: #188a55 !important; /* Warna latar belakang elemen dengan kelas bg-dark */
+}
+
+.bg-green {
+  background-color: #188a55 !important; /* Warna latar belakang elemen dengan kelas bg-green */
+}
+
+.sb-sidenav-dark {
+  background-color: #333333 !important; /* Warna latar belakang sidenav pada tema gelap */
+  color: #ffffff; /* Warna teks pada sidenav pada tema gelap */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+  color: #ffffff !important; /* Warna teks link pada sidenav pada tema gelap */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+  color: #ffffff !important; /* Warna ikon pada link pada sidenav pada tema gelap */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+  color: #ffffff !important; /* Warna teks heading pada sidenav pada tema gelap */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
+  color: #ffffff !important; /* Warna panah collapse pada tema gelap */
+}
+
+.active-sidebar {
+  background-image: linear-gradient(to right, #99d5b9, #fffefe00) !important; /* Gradient untuk sidebar aktif pada tema gelap */
+  border-top-left-radius: 25px !important;
+  border-bottom-right-radius: 25px !important;
+  margin: 5px !important; /* Margin untuk sidebar aktif pada tema gelap */
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+  background-color: #444444 !important; /* Warna latar belakang footer sidenav pada tema gelap */
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #198a55; /* Warna latar belakang input group pada tema gelap */
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+}
+
+.table .thead-dark th {
+  background-color: #198a55; /* Warna latar belakang header tabel pada tema gelap */
+  color: #ffffff; /* Warna teks header tabel pada tema gelap */
+}
+
+.ql-container {
+  min-height: 10rem;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-editor {
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+}
+
+
+/* Card */
+.card {
+  background-color: #333333; /* Warna latar belakang tema gelap untuk card */
+  color: #ffffff; /* Warna teks pada tema gelap */
+  border-color: #555555; /* Warna border pada tema gelap */
+}
+
+.card-header {
+  background-color: #222222; /* Warna latar belakang header card pada tema gelap */
+  color: #ffffff; /* Warna teks header pada tema gelap */
+  border-bottom: 1px solid #555555; /* Border bawah pada tema gelap */
+  padding: 10px 15px; /* Padding untuk header */
+}
+
+.card-body {
+  background-color: #444444; /* Warna latar belakang body card pada tema gelap */
+  color: #ffffff; /* Warna teks body pada tema gelap */
+  padding: 15px; /* Padding untuk body */
+}
+
+.card-footer {
+  background-color: #222222; /* Warna latar belakang footer card pada tema gelap */
+  color: #ffffff; /* Warna teks footer pada tema gelap */
+  border-top: 1px solid #555555; /* Border atas pada tema gelap */
+  padding: 10px 15px; /* Padding untuk footer */
+}
+
+/* Table */
+.table {
+  background-color: #333333; /* Warna latar belakang tema gelap untuk tabel */
+  color: #ffffff; /* Warna teks pada tema gelap */
+}
+
+.table th,
+.table td {
+  border-color: #555555; /* Warna border pada tema gelap */
+   color: #ffffff; /* Warna teks pada tema gelap */
+}
+
+.table th {
+  background-color: #222222; /* Warna latar belakang header kolom pada tema gelap */
+}
+
+.table td {
+  background-color: #444444; /* Warna latar belakang sel pada tema gelap */
+}
+

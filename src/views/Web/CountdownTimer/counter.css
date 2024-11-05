@@ -1,0 +1,40 @@
+/* src/Countdown.css */
+.countdown-container {
+    text-align: center;
+    /* background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    /* padding: 50px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-logo {
+    margin-bottom: 0px;
+  }
+  
+  .header-logo img {
+    display: block;
+    margin: 0 auto;
+    width: 110px;
+  }
+  
+  .countdown-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .timer span {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 12px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

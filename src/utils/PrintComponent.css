@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
+    line-height: 1.2;
+}
+
+.header-code {
+    text-align: center;
+    font-size: 8pt;
+    margin-top: -8px;
+}
+
+.barcode {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.qrcode {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 10pt;
+}
+
+.info-section div {
+    width: 32%;
+}
+
+.info-label {
+    font-weight: bold;
+}
+
+.signature-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.signature-line {
+    border-top: 1px solid black;
+    width: 300px;
+    margin: 0 auto;
+}
+
+@media print {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 20px;
+    }
+
+    table {
+        page-break-after: auto;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+}
