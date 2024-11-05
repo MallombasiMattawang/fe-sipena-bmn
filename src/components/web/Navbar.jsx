@@ -31,10 +31,10 @@ export default function Navbar() {
                 </a>
               </div>
               <div className="header-text">
-              <h2 className="header-school">OTBAN5-EVENTS</h2>
+              <h2 className="header-school">SIPENA-BMN</h2>
                 <hr />
                 <div className="header-address">
-                  Otoritas Bandar Udara Wilayah V Kelas 1 - Makassar
+                  Sistem Pengendalian BMN | Otoritas Bandar Udara Wilayah V Kelas 1 - Makassar
                 </div>
               </div>
             </div>
@@ -50,10 +50,10 @@ export default function Navbar() {
                 </a>
               </div>
               <div className="col-md-12 text-center text-white mb-3">
-                <h2 className="header-school">OTBAN5-EVENTS</h2>
+                <h2 className="header-school">SIPENA-BMN</h2>
                 <hr />
                 <div className="header-address">
-                Otoritas Bandar Udara Wilayah V Kelas 1 - Makassar
+                Sistem Pengendalian BMN | Otoritas Bandar Udara Wilayah V Kelas 1 - Makassar
                 </div>
               </div>
             </div>
@@ -98,89 +98,18 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <ul className="navbar-nav me-auto mb-2 mb-md-0">
-              <li className="nav-item ms-2">
-                <Link
-                  className={
-                    activeRoute[1] === ""
-                      ? "nav-link active text-uppercase"
-                      : "nav-link text-uppercase"
-                  }
-                  to="/"
-                >
-                  <i className="fa fa-home"></i> BERANDA
-                </Link>
-              </li>
-
             
-              <li className="nav-item ms-2">
-                <Link
-                  className={
-                    activeRoute[1] === "posts"
-                      ? "nav-link active text-uppercase"
-                      : "nav-link text-uppercase"
-                  }
-                  to="/posts"
-                >
-                  <i className="fa fa-book"></i> Informasi
-                </Link>
-              </li>
-
-              <li className="nav-item ms-2">
-                <Link
-                  className={
-                    activeRoute[1] === "faqs"
-                      ? "nav-link active text-uppercase"
-                      : "nav-link text-uppercase"
-                  }
-                  to="/faqs"
-                >
-                  <i className="fa fa-question"></i> FAQ
-                </Link>
-              </li>
-
-             
-
-              <li className="nav-item ms-2">
-                <Link
-                  className={
-                    activeRoute[1] === "photos"
-                      ? "nav-link active text-uppercase"
-                      : "nav-link text-uppercase"
-                  }
-                  to="/photos"
-                >
-                  <i className="fa fa-camera"></i>  FOTO
-                </Link>
-                
-              </li>
-
-              <li className="nav-item ms-2">
-                <Link
-                  className={
-                    activeRoute[1] === "videos"
-                      ? "nav-link active text-uppercase"
-                      : "nav-link text-uppercase"
-                  }
-                  to="/videos"
-                >
-                  <i className="fa fa-video"></i> VIDEO
-                </Link>
-                
-              </li>
-             
-            </ul>
             <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li className="nav-item">
                 <Link
                   className={
-                    activeRoute[1] === "regis-confirm"
+                    activeRoute[1] === "/"
                       ? "nav-link active text-uppercase bg-success"
                       : "nav-link text-uppercase bg-success"
                   }
-                  to="/regis-confirm"
+                  to="/"
                 >
-                  <i className="fa fa-credit-card"></i> KONFIRMASI
+                  <i className="fa fa-user"></i> LOGIN OPERATOR
                 </Link>
                 </li>
                 &nbsp;&nbsp;

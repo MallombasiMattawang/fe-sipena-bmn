@@ -106,6 +106,8 @@ import StatusAsetEdit from "../views/Admin/StatusAsets/Edit";
 import MasaAsetIndex from "../views/Admin/MasaAsets/Index";
 import MasaAsetCreate from "../views/Admin/MasaAsets/Create";
 import MasaAsetEdit from "../views/Admin/MasaAsets/Edit";
+import Privacy from "../views/Web/Privacy/Index";
+import AsetExpired from "../views/Admin/Asets/expired";
 
 //import view products index
 // import WebProductsIndex from "../views/Web/Products/Index";
@@ -510,6 +512,15 @@ export default function RoutesIndex() {
                     </PrivateRoutes>
                 }
             />
+             {/* private route "/admin/asets-expired/" */}
+             <Route
+                path="/admin/asets-expired"
+                element={
+                    <PrivateRoutes>
+                        <AsetExpired />
+                    </PrivateRoutes>
+                }
+            />
             {/* private route "/admin/lokasi-asets/create" */}
             <Route
                 path="/admin/lokasi-asets/create"
@@ -687,6 +698,9 @@ export default function RoutesIndex() {
 
             {/* route "/faqs" */}
             <Route path="/faqs" element={<WebFaqsIndex />} />
+
+            {/* route "/privacy" */}
+            <Route path="/privacy" element={<Privacy />} />
 
 
 
