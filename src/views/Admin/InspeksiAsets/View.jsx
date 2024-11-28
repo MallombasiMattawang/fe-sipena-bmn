@@ -195,7 +195,7 @@ export default function InspeksiAsetView() {
                                                     <th className="border-0">(%)</th>
                                                     <th className="border-0">Hasil Inspeksi</th>
                                                     <th className="border-0">Rekomendasi</th>
-                                                    <th className="border-0">Evident</th>
+                                                    <th className="border-0">Foto Barang</th>
                                                     <th className="border-0">Petugas</th>
                                                     {/* <th className="border-0" style={{ width: "15%" }}>
                                                         Actions

@@ -7,8 +7,8 @@ import Cookies from 'js-cookie';
 const Api = axios.create({
 
     //set endpoint API
-    //    baseURL: 'http://127.0.0.1:8000',
-      baseURL: 'https://api-bmn.otban5-events.com',
+        // baseURL: 'http://127.0.0.1:8000',
+       baseURL: 'https://api-bmn.otban5-events.com',
 
     //  baseURL: 'https://api.sipena-bmn.com',
 

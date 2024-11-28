@@ -278,14 +278,41 @@ export default function AsetExpired() {
                                                                                 </small>
                                                                             </td>
                                                                             <td>{aset.nama_aset}</td>
-                                                                            <td>{aset.kondisi.nama_kondisi}</td>
+                                                                            {/* <td>{aset.kondisi.nama_kondisi}</td> */}
+                                                                            <td>
+                                                                                <span className="text-center"
+                                                                                    style={{
+                                                                                        color: progressPercentage >= 51 ? "green" :
+                                                                                            progressPercentage >= 11 ? "yellow" :
+                                                                                                "red"
+                                                                                    }}>
+                                                                                    {progressPercentage >= 51 ? "BAIK" :
+                                                                                        progressPercentage >= 11 ? "RUSAK RINGAN" :
+                                                                                            "RUSAK BERAT"}
+                                                                                    {/* {aset.kondisi.nama_kondisi} */}
+                                                                                </span>
+
+                                                                                <hr />
+                                                                                <small>WASDAL:</small>  <br />
+                                                                                {aset.inspeksi_terbaru ? aset.inspeksi_terbaru.hasil_inspeksi : '-'}
+                                                                                <hr />
+                                                                                <small>Rekomendasi:</small>  <br />
+                                                                                {aset.inspeksi_terbaru ? aset.inspeksi_terbaru.rekomendasi : '-'}
+                                                                            </td>
                                                                             <td>{aset.status.nama_status}</td>
                                                                             <td>{aset.lokasi.nama_lokasi}</td>
                                                                             <td>
                                                                                 {masaPakai} Th / {tahunAkhir}
                                                                             </td>
-                                                                            <td className="text-center">
+                                                                            <td
+                                                                                className="text-center"
+                                                                                style={{
+                                                                                    color: progressPercentage < 41 ? "red" : "white"
+                                                                                }}
+                                                                            >
                                                                                 {progressPercentage.toFixed(0)}% {/* Format ke dua desimal */}
+
+
                                                                             </td>
                                                                             <td className="text-center">
                                                                                 {hasAnyPermission(["asets.edit"]) && (

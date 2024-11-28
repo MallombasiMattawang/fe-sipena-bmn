@@ -112,8 +112,6 @@ export default function sidebar() {
                       : activeRoute[2] === "kondisi-asets"
                         ? " active-sidebar"
                         : activeRoute[2] === "status-asets"
-                          ? " active-sidebar"
-                          : activeRoute[2] === "lokasi-asets"
                             ? " active-sidebar"
                             : "")
                   }

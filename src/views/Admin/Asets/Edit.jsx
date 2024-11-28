@@ -52,7 +52,10 @@ export default function AsetEdit() {
     const [image, setImage] = useState(null);
     const [errors, setErrors] = useState([]);
 
-    const [imageAset, setImageAset] = useState(null);
+    const [imageAset, setImageAset] = useState('/images/noimage.png');
+    const [imageAsetOld, setImageAsetOld] = useState('/images/noimage.png');
+    const [hasilInspeksi, setHasilInspeksi] = useState("");
+    const [rekomendasi, setRekomendasi] = useState("");
 
     // Select options state
     const [kategoriAset, setKategoriAset] = useState([]);
@@ -88,7 +91,10 @@ export default function AsetEdit() {
             setTanggalPerolehan(response.data.data.tanggal_perolehan);
             setPemegangAset(response.data.data.pemegang_aset);
             setMasaPakai(response.data.data.masa_pakai);
-            setImageAset(response.data.data.image);
+            setImageAsetOld(response.data.data.image);
+            setImageAset(response.data.data.inspeksi_terbaru.image);
+            setHasilInspeksi(response.data.data.inspeksi_terbaru.hasil_inspeksi);
+            setRekomendasi(response.data.data.inspeksi_terbaru.rekomendasi);
         });
     };
 
@@ -487,14 +493,51 @@ export default function AsetEdit() {
                                 <div className="card-header">
                                     <h6>Foto Aset</h6>
                                 </div>
-                                <div className="card-body bg-dark text-center">
-                                    <img
-                                        src={imageAset}
-                                        width={"300px"}
-                                        className="rounded"
-                                    />
+                                <div className="card-body bg-dark text-left">
+                                    {imageAsetOld ? (
+                                        <img
+                                            src={imageAsetOld}
+                                            width="100%"
+                                            className="rounded"
+                                            alt="Gambar Aset"
+                                        />
+                                    ) : (
+                                        <p>Gambar tidak tersedia</p> // Anda bisa mengganti teks ini dengan elemen lainnya
+                                    )}
+
                                 </div>
                             </div>
+                            {hasilInspeksi ? (
+                                <div className="card">
+                                    <div className="card-header">
+                                        <h6>Inspeksi Terbaru</h6>
+                                    </div>
+                                    <div className="card-body bg-dark text-left">
+                                        {imageAset ? (
+                                            <img
+                                                src={imageAset}
+                                                width="100%"
+                                                className="rounded"
+                                                alt="Gambar Aset"
+                                            />
+                                        ) : (
+                                            <p>-</p> // Anda bisa mengganti teks ini dengan elemen lainnya
+                                        )}
+                                        <hr />
+                                        <label>Hasil Inspkesi:</label>
+                                        <p>
+                                            {hasilInspeksi}
+                                        </p>
+                                        <label>Rekomendasi:</label>
+                                        <p>
+                                            {rekomendasi}
+                                        </p>
+                                    </div>
+                                </div>
+                            ) : (
+                                <p><hr />Belum ada Inspeksi</p> // Anda bisa mengganti teks ini dengan elemen lainnya
+                            )}
+
                         </div>
                     </div>
                 </div>

@@ -27,6 +27,10 @@ export default function LokasiAsetCreate() {
     const [namaLokasi, setNamaLokasi] = useState("");
     const [kodeLokasi, setKodeLokasi] = useState("");
     const [keterangan, setKeterangan] = useState("");
+    const [penanggung_jawab, setPenanggung_jawab] = useState("");
+    const [nip_penanggung_jawab, setNip_penanggung_jawab] = useState("");
+    const [kuasa_pengguna, setKuasa_pengguna] = useState("");
+    const [nip_kuasa_pengguna, setNip_kuasa_pengguna] = useState("");
     const [errors, setErros] = useState([]);
 
     //token from cookies
@@ -43,7 +47,11 @@ export default function LokasiAsetCreate() {
                 //data
                 nama_lokasi: namaLokasi,
                 kode_lokasi: kodeLokasi,
-                keterangan: keterangan
+                keterangan: keterangan,
+                penanggung_jawab: penanggung_jawab,
+                nip_penanggung_jawab: nip_penanggung_jawab,
+                kuasa_pengguna: kuasa_pengguna,
+                nip_kuasa_pengguna: nip_kuasa_pengguna,
             },
             {
                 //header
@@ -119,6 +127,66 @@ export default function LokasiAsetCreate() {
                                         </div>
                                         {errors.kode_lokasi && (
                                             <div className="alert alert-danger">{errors.kode_lokasi[0]}</div>
+                                        )}
+                                        <div className="mb-3">
+                                            <label className="form-label fw-bold">
+                                                Penanggung Jawab
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                value={penanggung_jawab}
+                                                onChange={(e) => setPenanggung_jawab(e.target.value)}
+                                                placeholder="Enter Penanggung Jawab Lokasi"
+                                            />
+                                        </div>
+                                        {errors.penanggung_jawab && (
+                                            <div className="alert alert-danger">{errors.penanggung_jawab[0]}</div>
+                                        )}
+                                        <div className="mb-3">
+                                            <label className="form-label fw-bold">
+                                                NIP Penanggung Jawab
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                value={nip_penanggung_jawab}
+                                                onChange={(e) => setNip_penanggung_jawab(e.target.value)}
+                                                placeholder="Enter NIP Penanggung Jawab Lokasi"
+                                            />
+                                        </div>
+                                        {errors.nip_penanggung_jawab && (
+                                            <div className="alert alert-danger">{errors.nip_penanggung_jawab[0]}</div>
+                                        )}
+                                        <div className="mb-3">
+                                            <label className="form-label fw-bold">
+                                                Kuasa Pengguna
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                value={kuasa_pengguna}
+                                                onChange={(e) => setKuasa_pengguna(e.target.value)}
+                                                placeholder="Enter Kuasa Pengguna"
+                                            />
+                                        </div>
+                                        {errors.kuasa_pengguna && (
+                                            <div className="alert alert-danger">{errors.kuasa_pengguna[0]}</div>
+                                        )}
+                                        <div className="mb-3">
+                                            <label className="form-label fw-bold">
+                                                NIP Kuasa Pengguna
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                value={nip_kuasa_pengguna}
+                                                onChange={(e) => setNip_kuasa_pengguna(e.target.value)}
+                                                placeholder="Enter NIP Kuasa Pengguna"
+                                            />
+                                        </div>
+                                        {errors.nip_kuasa_pengguna && (
+                                            <div className="alert alert-danger">{errors.nip_kuasa_pengguna[0]}</div>
                                         )}
                                         <div className="mb-3">
                                             <label className="form-label fw-bold">

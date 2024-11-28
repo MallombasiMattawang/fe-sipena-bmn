@@ -42,12 +42,12 @@ export default function AsetFilter() {
     const status = params.get('status');
     const lokasi = params.get('lokasi');
 
-     // define state for filters
-     const [categories, setCategories] = useState('');
-     const [conditions, setConditions] = useState([]);
-     const [statuses, setStatuses] = useState([]);
-     const [locations, setLocations] = useState([]);
- 
+    // define state for filters
+    const [categories, setCategories] = useState('');
+    const [conditions, setConditions] = useState([]);
+    const [statuses, setStatuses] = useState([]);
+    const [locations, setLocations] = useState([]);
+
 
     // state for selected filter
     const [selectedCategory, setSelectedCategory] = useState('');
@@ -73,28 +73,29 @@ export default function AsetFilter() {
 
     //token from cookies
     const token = Cookies.get("token");
-    const fetchFilterData = async () => {
-        try {
-          const categoryResponse = await Api.get(`/api/admin/kategori-asets/${kategori}`, {
+    const getKategori = async () => {
+        await Api.get(`/api/admin/kategori-asets/${kategori}`, {
             headers: { Authorization: `Bearer ${token}` },
-          }).then((response) => setCategories(response.data.data));
-    
-          const conditionResponse = await Api.get(`/api/admin/kondisi-asets/${kondisi}`, {
+        }).then((response) => setCategories(response.data.data));
+    };
+    const getStatus = async () => {
+        await Api.get(`/api/admin/lokasi-asets/${status}`, {
             headers: { Authorization: `Bearer ${token}` },
-          }).then((response) => setConditions(response.data.data));
-    
-          const statusResponse = await Api.get(`/api/admin/status-asets/${status}`, {
+        }).then((response) => setStatuses(response.data.data));
+    };
+
+    const getLokasi = async () => {
+        await Api.get(`/api/admin/lokasi-asets/${lokasi}`, {
             headers: { Authorization: `Bearer ${token}` },
-          }).then((response) => setStatuses(response.data.data));
-    
-          const locationResponse = await Api.get(`/api/admin/lokasi-asets/${lokasi}`, {
+        }).then((response) => setLocations(response.data.data));
+    };
+
+    const getKondisi = async () => {
+        await Api.get(`/api/admin/kondisi-asets/${kondisi}`, {
             headers: { Authorization: `Bearer ${token}` },
-          }).then((response) => setLocations(response.data.data));
-    
-        } catch (error) {
-          console.error('Failed to fetch filter data:', error);
-        }
-      };
+        }).then((response) => setConditions(response.data.data));
+    };
+
 
     //function fetchData
     const fetchData = async (pageNumber = 1, keywords = "") => {
@@ -125,7 +126,10 @@ export default function AsetFilter() {
     //useEffect untuk memanggil fetchData saat pertama kali render
     useEffect(() => {
         fetchData();
-        fetchFilterData();
+        getKategori();
+        getLokasi();
+        getStatus();
+        getKondisi();
     }, [kategori, kondisi, status, lokasi]); // Akan dipanggil ulang jika parameter berubah
 
     //function "searchData" untuk melakukan pencarian
@@ -192,16 +196,16 @@ export default function AsetFilter() {
                                     </div>
                                 )}
                                 <div className="col-md-3 col-12 mb-2">
-                                    
-                                        <h6>Kategori : {categories.nama_kategori}</h6> <br />
-                                        <h6>Kondisi : {conditions.nama_kondisi}</h6>
-                                        
+
+                                    <h6>Kategori : {categories.nama_kategori}</h6> <br />
+                                    <h6>Kondisi : {conditions.nama_kondisi}</h6>
+
                                 </div>
                                 <div className="col-md-3 col-12 mb-2">
-                                    
-                                        <h6>Status : {statuses.nama_status}</h6> <br />
-                                        <h6>Lokasi : {locations.nama_lokasi}</h6>
-                                        
+
+                                    <h6>Status : {statuses.nama_status}</h6> <br />
+                                    <h6>Lokasi : {locations.nama_lokasi}</h6>
+
                                 </div>
                             </div>
                         </div>
@@ -262,14 +266,33 @@ export default function AsetFilter() {
                                                                         </small>
                                                                     </td>
                                                                     <td>{aset.kategori.nama_kategori}</td>
-                                                                    <td>{aset.kondisi.nama_kondisi}</td>
+                                                                    {/* <td>{aset.kondisi.nama_kondisi}</td> */}
+                                                                    <td
+                                                                        className="text-center"
+                                                                        style={{
+                                                                            color: progressPercentage < 41 ? "red" : "white"
+                                                                        }}
+                                                                    >
+                                                                        {progressPercentage >= 61 ? "BAIK" :
+                                                                            progressPercentage >= 41 ? "RUSAK RINGAN" :
+                                                                                "RUSAK BERAT"}
+                                                                        {/* <hr />
+                                                                                {aset.kondisi.nama_kondisi} */}
+                                                                    </td>
                                                                     <td>{aset.status.nama_status}</td>
                                                                     <td>{aset.lokasi.nama_lokasi}</td>
                                                                     <td>
                                                                         {masaPakai} Th / {tahunAkhir}
                                                                     </td>
-                                                                    <td className="text-center">
+                                                                    <td
+                                                                        className="text-center"
+                                                                        style={{
+                                                                            color: progressPercentage < 41 ? "red" : "white"
+                                                                        }}
+                                                                    >
                                                                         {progressPercentage.toFixed(0)}% {/* Format ke dua desimal */}
+                                                                        
+                                                                        
                                                                     </td>
                                                                     <td className="text-center">
                                                                         {hasAnyPermission(["asets.edit"]) && (

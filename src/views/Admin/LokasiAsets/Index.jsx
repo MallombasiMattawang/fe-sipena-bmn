@@ -190,7 +190,12 @@ export default function LokasiAsetIndex() {
                                                                         (pagination.currentPage - 1) *
                                                                         pagination.perPage}
                                                                 </td>
-                                                                <td>{category.nama_lokasi}</td>
+                                                                <td>
+                                                                    {category.nama_lokasi}
+                                                                     <hr />
+                                                                     Penanggung Jawab : {category.penanggung_jawab}   <br />
+                                                                     Kuasa Pengguna : {category.kuasa_pengguna}   
+                                                                </td>
                                                                 <td>{category.kode_lokasi}</td>
                                                                 <td className="text-center">
                                                                     {hasAnyPermission(["asets.edit"]) && (

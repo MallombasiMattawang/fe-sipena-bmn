@@ -53,4 +53,7 @@ Penggunaan
 	•	Gunakan fitur monitoring untuk memantau status BMN yang telah tercatat.
 	•	Lakukan inspeksi melalui fitur pengendalian untuk memastikan kondisi dan status BMN.
 	•	Hasilkan laporan melalui fitur pelaporan untuk dokumentasi dan evaluasi.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b84c19 (update aset expired)

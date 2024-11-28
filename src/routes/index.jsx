@@ -42,49 +42,14 @@ import UsersEdit from "../views/Admin/Users/Edit";
 import CategoriesIndex from "../views/Admin/Categories/Index";
 import CategoriesCreate from "../views/Admin/Categories/Create";
 import CategoriesEdit from "../views/Admin/Categories/Edit";
-import PostsIndex from "../views/Admin/Posts/Index";
-import PostsCreate from "../views/Admin/Posts/Create";
-import PostsEdit from "../views/Admin/Posts/Edit";
-import PhotosIndex from "../views/Admin/Photos/Index";
-import SlidersIndex from "../views/Admin/Sliders/Index";
-import EventsIndex from "../views/Admin/Events/Index";
-import EventsCreate from "../views/Admin/Events/Create";
-import EventsEdit from "../views/Admin/Events/Edit";
-import EventCategoriesIndex from "../views/Admin/EventCategories/Index";
-import EventCategoriesCreate from "../views/Admin/EventCategories/Create";
-import EventCategoriesEdit from "../views/Admin/EventCategories/Edit";
-import EventJerseysIndex from "../views/Admin/EventJerseys/Index";
-
-import EventJerseysEdit from "../views/Admin/EventJerseys/Edit";
-import EventMembersIndex from "../views/Admin/EventMembers/Index";
-import EventJerseysCreate from "../views/Admin/EventJerseys/Create";
-import EventMemberCreate from "../views/Admin/EventMembers/Create";
-import EventMembersEdit from "../views/Admin/EventMembers/Edit";
 
 //======================================================
 // view web
 //======================================================
 
 // //import view home
-import Home from "../views/Web/Home/Index";
+// import Home from "../views/Web/Home/Index";
 
-//import view photos index
-import WebPhotosIndex from "../views/Web/Photos/Index";
-//import view posts index
-import WebPostsIndex from "../views/Web/Posts/Index";
-//import view post show
-import WebPostsShow from "../views/Web/Posts/Show";
-import WebRegisMember from "../views/Web/RegisMembers/Index";
-import WebRegisMessages from "../views/Web/RegisMembers/Message";
-import FaqIndex from "../views/Admin/Faqs/Index";
-import FaqsCreate from "../views/Admin/Faqs/Create";
-import FaqsEdit from "../views/Admin/Faqs/Edit";
-import SponsorIndex from "../views/Admin/Sponsors/Index";
-import WebFaqsIndex from "../views/Web/Faqs/Index";
-import CountdownTimer from "../views/Web/CountdownTimer/Index";
-import VideosIndex from "../views/Admin/Videos/Index";
-import WebVideosIndex from "../views/Web/Videos/Index";
-import EventMembersRereg from "../views/Admin/EventMembers/ReReg";
 import KategoriAsetIndex from "../views/Admin/KategoriAsets/Index";
 import KondisiAsetIndex from "../views/Admin/KondisiAsets/Index";
 import StatusAsetIndex from "../views/Admin/StatusAsets/Index";
@@ -108,25 +73,6 @@ import MasaAsetCreate from "../views/Admin/MasaAsets/Create";
 import MasaAsetEdit from "../views/Admin/MasaAsets/Edit";
 import Privacy from "../views/Web/Privacy/Index";
 import AsetExpired from "../views/Admin/Asets/expired";
-
-//import view products index
-// import WebProductsIndex from "../views/Web/Products/Index";
-// //import view products show
-// import WebProductsShow from "../views/Web/Products/Show";
-// import LayanansIndex from "../views/Admin/Layanans/Index";
-// import LayanansCreate from "../views/Admin/Layanans/Create";
-// import LayanansEdit from "../views/Admin/Layanans/Edit";
-
-// import TiketIndex from "../views/Admin/Tikets/Index";
-// import TiketCreate from "../views/Admin/Tikets/Create";
-// import ConfigDayEdit from "../views/Admin/ConfigDays/Edit";
-// import TiketAll from "../views/Admin/Tikets/All";
-// import Cetak from "../views/Admin/Tikets/Cetak";
-// import HolidaysIndex from "../views/Admin/Holidays/Index";
-// import HolidaysCreate from "../views/Admin/Holidays/Create";
-// import TiketBooking from "../views/Admin/Tikets/Booking";
-// import TiketEdit from "../views/Admin/Tikets/Edit";
-// import Scan from "../views/Web/Scans/Index";
 
 
 
@@ -249,219 +195,7 @@ export default function RoutesIndex() {
                 }
             />
 
-            {/* private route "/admin/posts" */}
-            <Route
-                path="/admin/posts"
-                element={
-                    <PrivateRoutes>
-                        <PostsIndex />
-                    </PrivateRoutes>
-                }
-            />
-
-            {/* private route "/admin/posts/create" */}
-            <Route
-                path="/admin/posts/create"
-                element={
-                    <PrivateRoutes>
-                        <PostsCreate />
-                    </PrivateRoutes>
-                }
-            />
-
-            {/* private route "/admin/posts/edit/:id" */}
-            <Route
-                path="/admin/posts/edit/:id"
-                element={
-                    <PrivateRoutes>
-                        <PostsEdit />
-                    </PrivateRoutes>
-                }
-            />
-
-
-
-            {/* private route "/admin/photos/" */}
-            <Route
-                path="/admin/photos"
-                element={
-                    <PrivateRoutes>
-                        <PhotosIndex />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/sliders/" */}
-            <Route
-                path="/admin/sliders"
-                element={
-                    <PrivateRoutes>
-                        <SlidersIndex />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/events/" */}
-            <Route
-                path="/admin/events"
-                element={
-                    <PrivateRoutes>
-                        <EventsIndex />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/events/create" */}
-            <Route
-                path="/admin/events/create"
-                element={
-                    <PrivateRoutes>
-                        <EventsCreate />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/events/edit/:id" */}
-            <Route
-                path="/admin/events/edit/:id"
-                element={
-                    <PrivateRoutes>
-                        <EventsEdit />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-categories/" */}
-            <Route
-                path="/admin/event-categories"
-                element={
-                    <PrivateRoutes>
-                        <EventCategoriesIndex />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-categories/create" */}
-            <Route
-                path="/admin/event-categories/create"
-                element={
-                    <PrivateRoutes>
-                        <EventCategoriesCreate />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-categories/edit/:id" */}
-            <Route
-                path="/admin/event-categories/edit/:id"
-                element={
-                    <PrivateRoutes>
-                        <EventCategoriesEdit />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-jerseys/" */}
-            <Route
-                path="/admin/event-jerseys"
-                element={
-                    <PrivateRoutes>
-                        <EventJerseysIndex />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-jerseys/create" */}
-            <Route
-                path="/admin/event-jerseys/create"
-                element={
-                    <PrivateRoutes>
-                        <EventJerseysCreate />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-jerseys/edit/:id" */}
-            <Route
-                path="/admin/event-jerseys/edit/:id"
-                element={
-                    <PrivateRoutes>
-                        <EventJerseysEdit />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-members/" */}
-            <Route
-                path="/admin/event-members"
-                element={
-                    <PrivateRoutes>
-                        <EventMembersIndex />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-members/create" */}
-            <Route
-                path="/admin/event-members/create"
-                element={
-                    <PrivateRoutes>
-                        <EventMemberCreate />
-                    </PrivateRoutes>
-                }
-            />
-            <Route
-                path="/admin/event-members/edit/:id"
-                element={
-                    <PrivateRoutes>
-                        <EventMembersEdit />
-                    </PrivateRoutes>
-                }
-            />
-            <Route
-                path="/admin/event-members/rereg/:id"
-                element={
-                    <PrivateRoutes>
-                        <EventMembersRereg />
-                    </PrivateRoutes>
-                }
-            />
-
-            {/* private route "/admin/event-faqs/" */}
-            <Route
-                path="/admin/event-faqs"
-                element={
-                    <PrivateRoutes>
-                        <FaqIndex />
-                    </PrivateRoutes>
-                }
-            />
-            {/* private route "/admin/event-faqs/create" */}
-            <Route
-                path="/admin/event-faqs/create"
-                element={
-                    <PrivateRoutes>
-                        <FaqsCreate />
-                    </PrivateRoutes>
-                }
-            />
-
-            <Route
-                path="/admin/event-faqs/edit/:id"
-                element={
-                    <PrivateRoutes>
-                        <FaqsEdit />
-                    </PrivateRoutes>
-                }
-            />
-
-            {/* private route "/admin/event-sponsor/" */}
-            <Route
-                path="/admin/event-sponsors"
-                element={
-                    <PrivateRoutes>
-                        <SponsorIndex />
-                    </PrivateRoutes>
-                }
-            />
-
-            {/* private route "/admin/event-videos/" */}
-            <Route
-                path="/admin/videos"
-                element={
-                    <PrivateRoutes>
-                        <VideosIndex />
-                    </PrivateRoutes>
-                }
-            />
+            
 
             {/* private route "/admin/kategori-asets/" */}
             <Route
@@ -675,29 +409,6 @@ export default function RoutesIndex() {
             {/* <Route path="/" element={<Home />} /> */}
             {/* route "/" */}
             <Route path="/" element={<Login />} />
-            {/* <Route path="/" element={<CountdownTimer />} /> */}
-
-
-            {/* route "/photos" */}
-            <Route path="/photos" element={<WebPhotosIndex />} />
-
-            {/* route "/posts" */}
-            <Route path="/posts" element={<WebPostsIndex />} />
-
-            {/* route "/videos" */}
-            <Route path="/videos" element={<WebVideosIndex />} />
-
-            {/* route "/posts/:slug" */}
-            <Route path="/posts/:slug" element={<WebPostsShow />} />
-
-            {/* route "/regis-members" */}
-            {/* <Route path="/regis-member" element={<WebRegisMember />} /> */}
-
-            {/* route "/regis-messages" */}
-            <Route path="/regis-confirm" element={<WebRegisMessages />} />
-
-            {/* route "/faqs" */}
-            <Route path="/faqs" element={<WebFaqsIndex />} />
 
             {/* route "/privacy" */}
             <Route path="/privacy" element={<Privacy />} />
